@@ -78,7 +78,7 @@ std::list<double> Biquad::CalculateCoeffs(double fs, bool noA0divide)
     }
 
     double d;
-    if (m_dFilterType == FilterType::PEAKING) // || m_dFilterType == FilterType::LOW_SHELF || m_dFilterType == FilterType::HIGH_SHELF)
+    if (m_dFilterType == FilterType::PEAKING || m_dFilterType == FilterType::LOW_SHELF || m_dFilterType == FilterType::HIGH_SHELF)
         d = pow(10.0, m_dFilterGain / 40.0);
     else
         d = pow(10.0, m_dFilterGain / 20.0);
@@ -87,9 +87,9 @@ std::list<double> Biquad::CalculateCoeffs(double fs, bool noA0divide)
     double cs = cos(a);
 
     double alpha;
-    if (m_dFilterType == FilterType::LOW_SHELF || m_dFilterType == FilterType::HIGH_SHELF) // S
-        alpha = num3 / 2 * sqrt((d + 1 / d) * (1 / m_dFilterBQ - 1) + 2);
-    else // BW
+    //if (m_dFilterType == FilterType::LOW_SHELF || m_dFilterType == FilterType::HIGH_SHELF) // S
+    //    alpha = num3 / 2 * sqrt((d + 1 / d) * (1 / m_dFilterBQ - 1) + 2);
+    //else // BW
         alpha = num3 * sinh(log(2.0) / 2.0 * m_dFilterBQ * a / num3);
 
     double beta = 2 * sqrt(d) * alpha;
