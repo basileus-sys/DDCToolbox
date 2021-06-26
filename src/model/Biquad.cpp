@@ -78,7 +78,7 @@ std::list<double> Biquad::CalculateCoeffs(double fs, bool noA0divide)
     }
 
     double d;
-    if (m_dFilterType == FilterType::PEAKING || m_dFilterType == FilterType::LOW_SHELF || m_dFilterType == FilterType::HIGH_SHELF)
+    if (m_dFilterType == FilterType::PEAKING) // || m_dFilterType == FilterType::LOW_SHELF || m_dFilterType == FilterType::HIGH_SHELF)
         d = pow(10.0, m_dFilterGain / 40.0);
     else
         d = pow(10.0, m_dFilterGain / 20.0);
