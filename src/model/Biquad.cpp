@@ -89,7 +89,7 @@ std::list<double> Biquad::CalculateCoeffs(double fs, bool noA0divide)
     double alpha;
     alpha = num3 / (2.0*m_dFilterBQ); 
     //if (m_dFilterType == FilterType::LOW_SHELF || m_dFilterType == FilterType::HIGH_SHELF) // S
-        *//alpha = num3 / 2 * sqrt((d + 1 / d) * (1 / m_dFilterBQ - 1) + 2);
+        //alpha = num3 / 2 * sqrt((d + 1 / d) * (1 / m_dFilterBQ - 1) + 2);
     // else // BW
     //    alpha = num3 * sinh(log(2.0) / 2.0 * m_dFilterBQ * a / num3);
 
