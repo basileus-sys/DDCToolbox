@@ -154,7 +154,7 @@ QVariant FilterModel::headerData(int section, Qt::Orientation orientation, int r
     switch (section) {
     case Type: return "Type";
     case Freq: return "Frequency";
-    case Bw: return "Bandwidth";
+    case Bw: return "Q Value";
     case Gain: return "Gain";
     default: return {};
     }
