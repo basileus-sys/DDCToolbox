@@ -118,7 +118,7 @@
      <item>
       <widget class="QLabel" name="label_2">
        <property name="text">
-        <string>Bandwidth (0.0 ~ 100.0)</string>
+        <string>Q Value (0.0 ~ 100.0)</string>
        </property>
       </widget>
      </item>
